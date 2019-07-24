@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="2" style="background: url('Cobaka.jpg')">
+<center><img id="1" src="bluespin.jpg" height="500" onmousedown="onoff(true)" onmouseup="onoff(false)"></br>
+<button onclick="bup('bluespin.jpg')"><img src="bluespin.jpg" height="300"></button><button onclick="bup('pinkspin.jpg')"><img src="pinkspin.jpg" height="300"></button><button onclick="bup('yellowspin.jpg')"><img src="yellowspin.jpg" height="300"></button></br>
+<button onclick="fon2()"><img src="Cat.jpg" height="200"></button><button onclick="fon1()"><img src="Cobaka.jpg" height="200"></button><button onclick="fon3()"><img src="Giraffe_standing.jpg" height="200"></button></center>
+</body>
+<script>
+    gradus=0
+    spin=false
+    function onoff(spinwork) {
+        spin=spinwork
+    }
+    function bup(img){
+            document.getElementById('1').src=img
+        }
+    function fon1(){
+            document.getElementById('2').style.background='url("Cobaka.jpg")'
+        }
+    function fon2(){
+            document.getElementById('2').style.background='url("Cat.jpg")'
+        }
+    function fon3(){
+            document.getElementById('2').style.background='url("Giraffe_standing.jpg")'
+        }
+    setInterval(function () {
+        if(spin){
+            gradus=gradus+20
+            document.getElementById('1').style.transform = 'rotate('+gradus+'deg)'
+        }
+    },100)
+</script>
+</html>
